@@ -29,7 +29,7 @@ export default function SingleProductPage() {
 
             fetchData(singleProductPage)
         }, 2000)
-    }, [])
+    }, [singleProductPage])
 
     return (
 
@@ -38,7 +38,7 @@ export default function SingleProductPage() {
 
                 {product != null ?
                     (
-                        <div> ok </div>
+                        <div> ok {id}</div>
 
                     ) :
                     (

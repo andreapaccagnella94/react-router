@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import productsPage from "../data/ProductsData"
+import { Link, NavLink } from "react-router-dom"
 
 export default function ProductsPage() {
 
@@ -39,11 +40,14 @@ export default function ProductsPage() {
                             {products.map(product =>
                                 <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={product.id}>
                                     <div className="card h-auto">
-                                        <img src={product.image} className="card-img-top h-100"></img>
-                                        <div className="card-body">
-                                            <h5 className="card-title">{product.title}</h5>
-                                            <p className="card-text">{product.description}</p>
-                                        </div>
+                                        <Link to={`/products/${product.id}`}>
+                                            <img src={product.image} className="card-img-top h-100"></img>
+                                            <div className="card-body">
+                                                <h5 className="card-title">{product.title}</h5>
+                                                <p className="card-text">{product.description}</p>
+
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             )}
