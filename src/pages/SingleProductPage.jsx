@@ -17,6 +17,7 @@ export default function SingleProductPage() {
                 // console.log(res.data);
                 const product = res.data
                 setProduct(product)
+                console.log(product)
             })
             .catch(err => {
                 console.error(err.message)
@@ -28,6 +29,8 @@ export default function SingleProductPage() {
         setTimeout(() => {
 
             fetchData(singleProductPage)
+            console.log(singleProductPage);
+
         }, 2000)
     }, [singleProductPage])
 
@@ -38,7 +41,7 @@ export default function SingleProductPage() {
 
                 {product != null ?
                     (
-                        <div> ok {id}</div>
+                        <div> ok {id} </div>
 
                     ) :
                     (
