@@ -40,6 +40,11 @@ Aggiungiamo nella pagina di dettaglio dei pulsanti per navigare al prodotto prec
 */
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+// layout
+import DefaultLayout from "./layout/DefaultLayout"
+
+// pages
 import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ProductsPage from "./pages/ProductsPage"
@@ -51,11 +56,13 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route element={<DefaultLayout />} >
+          <Route path="" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
 
 
   )

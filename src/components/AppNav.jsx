@@ -12,10 +12,10 @@ export default function AppNav() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/">Home</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/about">About</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/about">About</NavLink>
                         </li>
 
                         {/* <li className="nav-item dropdown">
@@ -30,7 +30,7 @@ export default function AppNav() {
                                     </ul>
                                 </li>*/}
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/products">Products</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/products">Products</NavLink>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

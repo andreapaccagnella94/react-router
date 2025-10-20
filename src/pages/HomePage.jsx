@@ -21,15 +21,12 @@ Centralizziamo la Navbar usando un componente Layout
 Gestiamo la classe active per i link attivi nella Navbar
 */
 
-import AppNav from "../components/AppNav"
 
 export default function HomePage() {
 
     return (
         <>
-            <header>
-                <AppNav />
-            </header>
+
             <main>
                 <div className="p-5 mb-4 bg-light rounded-3">
                     <div className="container-fluid py-5">

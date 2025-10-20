@@ -4,10 +4,9 @@ export default function AboutPage() {
 
     return (
         <>
-            <header>
-                <AppNav />
-            </header>
-            <h1>about</h1>
+            <main>
+                <h1>about</h1>
+            </main>
         </>
     )
 }

@@ -4,10 +4,10 @@ export default function ProductsPage() {
 
     return (
         <>
-            <header>
-                <AppNav />
-            </header>
-            <h1>products</h1>
+            <main>
+
+                <h1>products</h1>
+            </main>
         </>
     )
 }
