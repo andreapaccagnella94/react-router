@@ -1,16 +1,17 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import productsPage from "../data/ProductsData"
 
 export default function ProductsPage() {
 
-    const initialPage = 'https://fakestoreapi.com/products'
+    const initialPage = productsPage
     // make a state variable where store the products list
     const [products, setProducts] = useState([])
-    const [currentPage, setCurrentPage] = useState(initialPage)
+    // NON SERVE LO USESTATE LA PAGINA DEI PRODOTTI è UNA SOLA const [currentPage, setCurrentPage] = useState(initialPage)
 
     function fetchData(page) {
         axios
-            .get("https://fakestoreapi.com/products")
+            .get(page)
             .then(res => {
                 // log per vedere
                 // console.log(res.data);
@@ -23,7 +24,7 @@ export default function ProductsPage() {
     }
 
     useEffect(() => {
-        fetchData(currentPage)
+        fetchData(initialPage)
     }, [])
 
     return (
@@ -37,8 +38,8 @@ export default function ProductsPage() {
                         <div className="row g-4">
                             {products.map(product =>
                                 <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={product.id}>
-                                    <div className="card h-100">
-                                        <img src={product.image} className="card-img-top"></img>
+                                    <div className="card h-auto">
+                                        <img src={product.image} className="card-img-top h-100"></img>
                                         <div className="card-body">
                                             <h5 className="card-title">{product.title}</h5>
                                             <p className="card-text">{product.description}</p>
